@@ -16,6 +16,7 @@
 		08A2BBCD27419BCA009383CB /* CakeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2BBCC27419BCA009383CB /* CakeAppTests.swift */; };
 		08A2BBD727419BCA009383CB /* CakeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2BBD627419BCA009383CB /* CakeAppUITests.swift */; };
 		08A2BBD927419BCA009383CB /* CakeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2BBD827419BCA009383CB /* CakeAppUITestsLaunchTests.swift */; };
+		08A2BBE627419C05009383CB /* Cakes.json in Resources */ = {isa = PBXBuildFile; fileRef = 08A2BBE527419C05009383CB /* Cakes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		08A2BBD227419BCA009383CB /* CakeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CakeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08A2BBD627419BCA009383CB /* CakeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeAppUITests.swift; sourceTree = "<group>"; };
 		08A2BBD827419BCA009383CB /* CakeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		08A2BBE527419C05009383CB /* Cakes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cakes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				08A2BBBE27419BCA009383CB /* Assets.xcassets */,
 				08A2BBC027419BCA009383CB /* LaunchScreen.storyboard */,
 				08A2BBC327419BCA009383CB /* Info.plist */,
+				08A2BBE527419C05009383CB /* Cakes.json */,
 			);
 			path = CakeApp;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08A2BBC227419BCA009383CB /* LaunchScreen.storyboard in Resources */,
+				08A2BBE627419C05009383CB /* Cakes.json in Resources */,
 				08A2BBBF27419BCA009383CB /* Assets.xcassets in Resources */,
 				08A2BBBD27419BC5009383CB /* Main.storyboard in Resources */,
 			);
@@ -445,6 +449,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,6 +478,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
