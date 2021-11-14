@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		08A2BBB627419BC5009383CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2BBB527419BC5009383CB /* AppDelegate.swift */; };
 		08A2BBB827419BC5009383CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2BBB727419BC5009383CB /* SceneDelegate.swift */; };
-		08A2BBBA27419BC5009383CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2BBB927419BC5009383CB /* ViewController.swift */; };
+		08A2BBBA27419BC5009383CB /* CakesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2BBB927419BC5009383CB /* CakesViewController.swift */; };
 		08A2BBBD27419BC5009383CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08A2BBBB27419BC5009383CB /* Main.storyboard */; };
 		08A2BBBF27419BCA009383CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08A2BBBE27419BCA009383CB /* Assets.xcassets */; };
 		08A2BBC227419BCA009383CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08A2BBC027419BCA009383CB /* LaunchScreen.storyboard */; };
@@ -17,6 +17,8 @@
 		08A2BBD727419BCA009383CB /* CakeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2BBD627419BCA009383CB /* CakeAppUITests.swift */; };
 		08A2BBD927419BCA009383CB /* CakeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2BBD827419BCA009383CB /* CakeAppUITestsLaunchTests.swift */; };
 		08A2BBE627419C05009383CB /* Cakes.json in Resources */ = {isa = PBXBuildFile; fileRef = 08A2BBE527419C05009383CB /* Cakes.json */; };
+		08A2BBE82741BAC7009383CB /* Cake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2BBE72741BAC7009383CB /* Cake.swift */; };
+		08A2BBEA2741C64C009383CB /* CakeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2BBE92741C64C009383CB /* CakeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,7 @@
 		08A2BBB227419BC5009383CB /* CakeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CakeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08A2BBB527419BC5009383CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08A2BBB727419BC5009383CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		08A2BBB927419BC5009383CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		08A2BBB927419BC5009383CB /* CakesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakesViewController.swift; sourceTree = "<group>"; };
 		08A2BBBC27419BC5009383CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08A2BBBE27419BCA009383CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08A2BBC127419BCA009383CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		08A2BBD627419BCA009383CB /* CakeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeAppUITests.swift; sourceTree = "<group>"; };
 		08A2BBD827419BCA009383CB /* CakeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		08A2BBE527419C05009383CB /* Cakes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cakes.json; sourceTree = "<group>"; };
+		08A2BBE72741BAC7009383CB /* Cake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cake.swift; sourceTree = "<group>"; };
+		08A2BBE92741C64C009383CB /* CakeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +107,14 @@
 			children = (
 				08A2BBB527419BC5009383CB /* AppDelegate.swift */,
 				08A2BBB727419BC5009383CB /* SceneDelegate.swift */,
-				08A2BBB927419BC5009383CB /* ViewController.swift */,
+				08A2BBB927419BC5009383CB /* CakesViewController.swift */,
 				08A2BBBB27419BC5009383CB /* Main.storyboard */,
 				08A2BBBE27419BCA009383CB /* Assets.xcassets */,
 				08A2BBC027419BCA009383CB /* LaunchScreen.storyboard */,
 				08A2BBC327419BCA009383CB /* Info.plist */,
 				08A2BBE527419C05009383CB /* Cakes.json */,
+				08A2BBE72741BAC7009383CB /* Cake.swift */,
+				08A2BBE92741C64C009383CB /* CakeCollectionViewCell.swift */,
 			);
 			path = CakeApp;
 			sourceTree = "<group>";
@@ -262,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08A2BBBA27419BC5009383CB /* ViewController.swift in Sources */,
+				08A2BBBA27419BC5009383CB /* CakesViewController.swift in Sources */,
+				08A2BBE82741BAC7009383CB /* Cake.swift in Sources */,
 				08A2BBB627419BC5009383CB /* AppDelegate.swift in Sources */,
+				08A2BBEA2741C64C009383CB /* CakeCollectionViewCell.swift in Sources */,
 				08A2BBB827419BC5009383CB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
