@@ -15,21 +15,6 @@ class CakesViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        print("This will get printed before async/sync threads. Doesn't matter wheather the concurrent queue are in sync or async.")
-        
-        let sq = DispatchQueue(label: ".com.it.mac.Concurrency", attributes: .concurrent)
-        
-        sq.async {
-            print("This may get executed in any order.1")
-        }
-        sq.async {
-            print("This may get executed in any order.2")
-        }
-        sq.async {
-            print("This may get executed in any order.3")
-        }
-        print("This will print before the async/sync threads. Doesn't matter wheather the concurrent queue are in sync or async.")
-        
         collectionView.dataSource = self
         collectionView.delegate = self
         
@@ -42,12 +27,38 @@ class CakesViewController: UIViewController {
             let data = try Data(contentsOf: url)
             
             cakes = try jsonDecoder.decode([Cake].self, from: data)
-            print(cakes)
-            print(data)
+            //print(cakes)
+            //print(data)
         } catch {
             print(error.localizedDescription)
         }
+        getCakes()
         
+    }
+    
+    func getCakes() {
+        let urlSession = URLSession.shared
+        guard let url = URL(string: "https://gist.githubusercontent.com/hart88/79a65d27f52cbb74db7df1d200c4212b/raw/ebf57198c7490e42581508f4f40da88b16d784ba/cakeList") else {
+            return
+        }
+        
+        let dataTask = urlSession.dataTask(with: url) { data, urlResponse, error in
+            let decoder = JSONDecoder()
+            
+            guard let _data = data else {
+                return
+            }
+            
+            do {
+                let cakes = try decoder.decode([Cake].self, from: _data)
+                print(cakes)
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+        }
+        
+        dataTask.resume()
     }
 
 }
@@ -94,11 +105,3 @@ extension CakesViewController: UICollectionViewDelegateFlowLayout {
     
 }
 
-func randomFunction() {
-    DispatchQueue.global().async {
-        print("I am in global queue. This do not mean I am in main thread. Since I am not in main thread, the user interface(UI) of the app will keep running no matter how long or large this computation is.")
-        DispatchQueue.main.async {
-            print("This is the main thread/queue. You can use UI component related code in this thread.")
-        }
-    }
-}
